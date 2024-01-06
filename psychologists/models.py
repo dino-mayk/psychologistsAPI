@@ -5,9 +5,9 @@ from sorl.thumbnail import delete, get_thumbnail
 
 
 class Psychologist(models.Model):
-    name = models.CharField(max_length=50)
-    surname = models.CharField(max_length=50)
-    patronymic = models.CharField(max_length=50)
+    name = models.CharField(max_length=100)
+    surname = models.CharField(max_length=100)
+    patronymic = models.CharField(max_length=100)
     photo = models.ImageField(
         upload_to='uploads/photos/%Y/%m',
         null=True,
