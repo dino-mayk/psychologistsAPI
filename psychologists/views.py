@@ -1,9 +1,15 @@
-from rest_framework import viewsets
+from rest_framework import permissions, status
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
 from psychologists.models import Psychologist
 from psychologists.serializers import PsychologistSerializer
 
 
-class PsychologistViewSet(viewsets.ModelViewSet):
-    queryset = Psychologist.objects.all()
-    serializer_class = PsychologistSerializer
+class PsychologistsApiView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request, *args, **kwargs):
+        todos = Psychologist.objects.all()
+        serializer = PsychologistSerializer(todos, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)

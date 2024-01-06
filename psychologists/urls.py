@@ -1,12 +1,7 @@
-from django.urls import include, path
-from rest_framework import routers
+from django.urls import path
 
-from psychologists.views import PsychologistViewSet
-
-router = routers.SimpleRouter()
-
-router.register(r'psychologist', PsychologistViewSet)
+from psychologists.views import PsychologistsApiView
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('api', PsychologistsApiView.as_view()),
 ]
