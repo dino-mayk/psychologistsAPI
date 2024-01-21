@@ -8,6 +8,7 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('psychologists/', include("psychologists.urls")),
     path('timetable/', include("timetable.urls")),
+    path('articles/', include("articles.urls")),
 ]
 
 
