@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from articles.models import Article
-from articles.serializers import ArticlesSerializer, ArticleSerializer
+from articles.serializers import ArticleSerializer, ArticlesSerializer
 
 
 class ArticlesAPIView(APIView):
