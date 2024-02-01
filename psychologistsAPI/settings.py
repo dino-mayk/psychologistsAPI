@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'psychologists',
     'timetable',
     'articles',
+    'links',
 ]
 
 MIDDLEWARE = [
