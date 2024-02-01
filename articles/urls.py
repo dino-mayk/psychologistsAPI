@@ -1,6 +1,6 @@
 from django.urls import path
 
-from articles.views import ArticlesAPIView, ArticleApiView
+from articles.views import ArticleApiView, ArticlesAPIView
 
 urlpatterns = [
     path(

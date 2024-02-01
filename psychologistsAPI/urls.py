@@ -10,6 +10,7 @@ urlpatterns = [
     path('timetable/', include("timetable.urls")),
     path('articles/', include("articles.urls")),
     path('links/', include("links.urls")),
+    path('books/', include("books.urls")),
 ]
 
 
