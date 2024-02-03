@@ -7,4 +7,5 @@ from articles.models import Article
 class AdminArticle(admin.ModelAdmin):
     list_display = [
         'title',
+        'author',
     ]

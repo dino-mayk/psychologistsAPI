@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.safestring import mark_safe
 from django_cleanup.signals import cleanup_pre_delete
 from sorl.thumbnail import delete, get_thumbnail
+from tinymce.models import HTMLField
 
 
 class Psychologist(models.Model):
@@ -9,9 +10,13 @@ class Psychologist(models.Model):
     surname = models.CharField(max_length=250)
     patronymic = models.CharField(max_length=250)
     photo = models.ImageField(
-        upload_to='uploads/photos/%Y/%m',
+        upload_to='uploads/photos/psychologists/%Y/%m',
         null=True,
     )
+    position = models.CharField(max_length=250)
+    phone_number = models.CharField(max_length=20)
+    email = models.EmailField(max_length=250)
+    description = HTMLField()
     created_on = models.DateTimeField(auto_now_add=True)
 
     @property

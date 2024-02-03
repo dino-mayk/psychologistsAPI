@@ -1,24 +1,11 @@
 from django.contrib import admin
 
-from contacts.models import Address, Email, PhoneNumber
+from contacts.models import Contact
 
 
-@admin.register(PhoneNumber)
-class AdminPhoneNumber(admin.ModelAdmin):
+@admin.register(Contact)
+class AdminContact(admin.ModelAdmin):
     list_display = [
-        'phone_number',
-    ]
-
-
-@admin.register(Address)
-class AdminAddress(admin.ModelAdmin):
-    list_display = [
-        'address',
-    ]
-
-
-@admin.register(Email)
-class AdminEmail(admin.ModelAdmin):
-    list_display = [
-        'email',
+        'type',
+        'data',
     ]

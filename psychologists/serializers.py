@@ -12,4 +12,8 @@ class PsychologistSerializer(serializers.HyperlinkedModelSerializer):
             'surname',
             'patronymic',
             'photo',
+            'position',
+            'phone_number',
+            'email',
+            'description',
         ]

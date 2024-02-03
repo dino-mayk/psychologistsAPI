@@ -7,4 +7,5 @@ from books.models import Book
 class AdminBook(admin.ModelAdmin):
     list_display = [
         'title',
+        'author',
     ]

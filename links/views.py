@@ -8,6 +8,6 @@ from links.serializers import LinksSerializer
 
 class LinksAPIView(APIView):
     def get(self, request, *args, **kwargs):
-        articles = Link.objects.all()
-        serializer = LinksSerializer(articles, many=True)
+        links = Link.objects.all()
+        serializer = LinksSerializer(links, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
